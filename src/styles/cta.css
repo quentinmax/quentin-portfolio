@@ -1,0 +1,136 @@
+.cta-btn {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.cta-btn:hover {
+  cursor: pointer;
+}
+
+.cta-btn:hover span {
+  height: 100%;
+  cursor: pointer;
+}
+
+.cta-btn:hover .cta-btn-inner {
+  border: 0;
+}
+
+.cta-btn:hover .cta-btn-inner > * {
+  z-index: 3;
+  color: var(--text-light);
+}
+
+.cta-btn-inner > * {
+  transition: all 500ms cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.cta-btn:hover .cta-btn-inner svg {
+  animation: arrow 500ms cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.cta-btn-inner {
+  position: relative;
+  /* border-bottom: 2px solid var(--text-dark); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 5rem;
+  transition: all 500ms cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.cta-btn span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  transition: all 500ms cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.text-container {
+  overflow: hidden;
+}
+
+.filter-btn {
+  padding: 1rem 2rem;
+  border-radius: 9999rem;
+  font-size: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 500ms cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.selected {
+  background-color: var(--accent-red);
+  color: var(--text-light);
+}
+
+.outline {
+  background-color: var(--background-light);
+  color: var(--accent-red);
+  border: 2px solid var(--accent-red);
+}
+
+.outline:hover::before {
+  scale: 50;
+}
+
+.outline:hover {
+  color: var(--text-light);
+}
+
+.outline::before {
+  z-index: 1;
+  border-radius: 100%;
+  display: flex;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  background-color: var(--accent-red);
+  width: 10px;
+  height: 10px;
+  transition: all 600ms ease-in-out;
+}
+
+.solid:hover,
+.outline:hover {
+  cursor: pointer;
+}
+
+.animated-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.animated-link span {
+  transition: all 200ms ease-in-out;
+}
+
+.animated-link:hover span {
+  transform: translate(5px, -5px);
+}
+
+.animated-link a {
+  color: var(--text-light);
+  margin-right: 0.7rem;
+}

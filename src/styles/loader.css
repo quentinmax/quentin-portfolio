@@ -1,0 +1,59 @@
+.loader-background {
+  background-image: url("https://picsum.photos/1920/1080");
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.loader-container {
+  overflow: hidden;
+  position: relative;
+}
+.loader {
+  background-color: var(--screen);
+  display: grid;
+  place-content: center;
+  height: 100dvh;
+  width: 100dvw;
+  color: var(--text-light);
+  overflow: hidden;
+}
+
+.loader-content-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.loader-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+.loader-content-inner {
+  flex-direction: row;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+.loader p {
+  font-size: 1rem;
+  margin-right: 0.7rem;
+  font-family: "Philosopher";
+}
+
+.loader-container span {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 0px;
+  background-color: var(--accent-red);
+}

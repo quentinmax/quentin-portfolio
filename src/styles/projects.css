@@ -1,0 +1,98 @@
+.projects-container {
+  padding: 0rem 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0 2rem;
+  width: 100%;
+  margin: 3rem 0;
+  padding-left: 3rem;
+}
+
+.filter hr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  z-index: -10;
+  height: 1px;
+}
+
+.table-name {
+  font-size: 3rem;
+  font-family: "Thunder";
+}
+
+table {
+  background-color: var(--background-light);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 2rem 5rem;
+  text-align: left;
+}
+
+tbody td {
+  cursor: pointer;
+}
+
+tr {
+  border-bottom: 1px solid var(--dark-surface);
+}
+
+thead {
+  color: var(--accent-red);
+  text-transform: uppercase;
+}
+
+.coming-soon {
+  color: var(--dark-surface);
+}
+
+@media (max-width: 650px) {
+  .projects-container {
+    padding: 3rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  th {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 2rem;
+  }
+
+  td {
+    display: block;
+    padding: 0.5rem 2rem;
+  }
+
+  tbody td:nth-of-type(2)::before {
+    content: "Services: ";
+    text-transform: capitalize;
+  }
+  tbody td:nth-of-type(3)::before {
+    content: "Type: ";
+    text-transform: capitalize;
+  }
+  tbody td:nth-of-type(4)::before {
+    content: "Year: ";
+    text-transform: capitalize;
+  }
+}

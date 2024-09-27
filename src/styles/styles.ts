@@ -1,0 +1,10 @@
+import "./index.css";
+import "./hero.css";
+import "./loader.css";
+import "./description.css";
+import "./cta.css";
+import "./work.css";
+import "./projects.css";
+import "./footer.css";
+import "./contact.css";
+import "./misc.css";
