@@ -6,14 +6,18 @@ import CTAButton from "../components/CTAButton";
 const Footer = () => {
   const { scrollYProgress } = useScroll();
 
-  const y = useTransform(scrollYProgress, [0.8, 1], [0, 0]);
+  const y = useTransform(scrollYProgress, [0.8, 1], [400, 0]);
 
   return (
     <motion.div className="footer-container" style={{ y }}>
       <h1>
         I caught your interest?
-        <br /> Let's talk!
+        <br />{" "}
+        <Link to={"/contact"} className="contact-link">
+          Let's talk!
+        </Link>
       </h1>
+      <div className="underline" />
       {/* <CTAButton title={"Contact"} action={() => {}} /> */}
       <hr />
       <div className="footer-content">

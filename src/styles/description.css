@@ -9,8 +9,14 @@
   font-size: 2.5rem;
   line-height: 3.2rem;
   letter-spacing: 2%;
+  text-wrap: pretty;
 }
 
+@media (width < 1500px) {
+  .description-inner {
+    font-size: 1.8rem;
+  }
+}
 .content-wrapper {
   display: grid;
   place-content: center;

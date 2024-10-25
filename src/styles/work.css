@@ -79,6 +79,11 @@
   justify-content: space-between;
 }
 
+@media (width < 1200px) {
+  .list-item-content h3 {
+    font-size: 4rem;
+  }
+}
 .project-thumbnail {
   pointer-events: none;
   display: flex;

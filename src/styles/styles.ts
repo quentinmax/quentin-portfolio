@@ -8,3 +8,4 @@ import "./projects.css";
 import "./footer.css";
 import "./contact.css";
 import "./misc.css";
+import "./home.css"
