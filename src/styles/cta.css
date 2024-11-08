@@ -3,6 +3,10 @@
   padding: 0.5rem;
 }
 
+.cta-btn.light:hover>.cta-btn-inner * {
+  z-index: 3;
+  color: var(--text-dark);
+}
 .cta-btn:hover {
   cursor: pointer;
 }
@@ -133,4 +137,10 @@
 .animated-link a {
   color: var(--text-light);
   margin-right: 0.7rem;
+}
+
+.error {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: red
 }

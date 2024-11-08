@@ -4,22 +4,24 @@ type Props = {
   required: boolean;
   title: string;
   index: number;
-  onChangeText: (e: any) => void;
-  value: string;
   placeholder: string;
+  register: any;
   type?: React.HTMLInputTypeAttribute;
   useTextarea?: boolean;
+  error?: string;
+  value: string;
 };
 
 const ContactInput: React.FC<Props> = ({
   index,
-  onChangeText,
   required,
   title,
-  value,
   placeholder,
   type = "text",
   useTextarea,
+  register,
+  error,
+  value,
 }) => {
   return (
     <div className="contact-input-wrapper">
@@ -27,23 +29,20 @@ const ContactInput: React.FC<Props> = ({
       <div className="contact-input-inner">
         <p>{index < 10 ? `0${index}` : index}</p>
         <div>
-          <p className="contact-input-title">
+          <p className={`contact-input-title ${value && "with-value"}`}>
             {title}
             {required ? " *" : ""}
           </p>
           {useTextarea ? (
-            <textarea
-              onChange={onChangeText}
-              value={value}
-              placeholder={placeholder}
-            />
+            <>
+              <textarea {...register} placeholder={placeholder} />
+              {error && <p className="error">{error}</p>}
+            </>
           ) : (
-            <input
-              onChange={onChangeText}
-              value={value}
-              placeholder={placeholder}
-              type={type}
-            />
+            <>
+              <input {...register} placeholder={placeholder} type={type} />
+              {error && <p className="error">{error}</p>}
+            </>
           )}
         </div>
       </div>

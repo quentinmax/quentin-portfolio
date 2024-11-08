@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useScroll, useTransform, motion } from "framer-motion";
 import CTAButton from "../components/CTAButton";
+import * as packageJson from "../../package.json";
 
 const Footer = () => {
   const { scrollYProgress } = useScroll();
@@ -22,14 +23,14 @@ const Footer = () => {
       <hr />
       <div className="footer-content">
         <div className="nav-buttons">
-          <Link to={"/work"}>Work</Link>
+          <Link to={"/projects"}>Work</Link>
           <Link to={"/about"}>About</Link>
           <Link to={"/contact"}>Contact</Link>
         </div>
       </div>
       <div className="footer-info">
         <p>Copyright © 2023 | Made by Quentin Höhne with ♥️ and React</p>
-        <p>Version 0.4</p>
+        <p>{`Version ${packageJson.version}`}</p>
       </div>
     </motion.div>
   );

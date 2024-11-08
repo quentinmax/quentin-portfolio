@@ -32,6 +32,7 @@
 
 .contact-input-title {
   font-size: 1.3rem;
+  transition: color 200ms ease-in-out;
 }
 
 .contact-input-inner input {
@@ -67,6 +68,9 @@
   color: #5b5858;
 }
 
+.with-value {
+  color: #5b5858
+}
 .contact-info {
   display: flex;
   flex-direction: column;
