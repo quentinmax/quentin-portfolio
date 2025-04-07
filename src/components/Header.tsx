@@ -11,8 +11,10 @@ const Header: React.FC<Props> = ({ title }) => {
 
   return (
     <div className="header">
-      <div className="back-btn" onClick={() => navigate("/..")}>
-        <img src={ArrowLeft} height={30} />
+      <div className="back-btn-wrapper" onClick={() => navigate("/..")}>
+        <div className="back-btn">
+          <img src={ArrowLeft} height={30} />
+        </div>
       </div>
       <h2>{title}</h2>
     </div>
